@@ -1,4 +1,5 @@
 import java.util.regex.*;
+import java.util.Scanner;
 class PasswordChecker {
     static String passwordIsValid(String password) {
         boolean DoesNotHaveSpecialCharacter = Pattern.matches("[a-zA-Z0-9]*", password);
@@ -69,5 +70,14 @@ class PasswordChecker {
             }
         }
         return result;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner Obj = new Scanner(System.in);
+        System.out.println("Set your password: ");
+        String password = Obj.nextLine();
+        System.out.println("Password is ok?: " +PasswordChecker.passwordIsOk(password));
+        System.out.println(PasswordChecker.passwordIsValid(password));
     }
 }
