@@ -8,12 +8,15 @@ class PasswordChecker {
         String results = "Successfully set";
         for(int i = 0; i < password.length(); i++) {
             char charInPassword = password.charAt(i);
+            //searches the password for a numeric value
             if(Character.isDigit(charInPassword)) {
                 hasNumericValue = true;
             }
+            //searches the password for an upperCase
             if(Character.isUpperCase(charInPassword)) {
                 hasUpperCase = true;
             }
+            //searches the password for a lowerCase
             if(Character.isLowerCase(charInPassword)) {
                 hasLowerCase = true;
             }
